@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Datasets - 忽略数据文件
+data/
+*.tgz
+
+# Model files - 忽略所有模型/引擎文件
+*.pth
+*.onnx
+*.engine
+
+# Profiler traces - 忽略大的性能追踪文件
+profiler_trace.json
+
+# Build artifacts
+build/
+
+# OS-specific
+.DS_Store

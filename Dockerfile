@@ -1,0 +1,33 @@
+# 使用NVIDIA官方提供的TensorRT镜像作为基础
+FROM nvcr.io/nvidia/tensorrt:23.10-py3
+
+# 设置工作目录
+WORKDIR /workspace
+
+# 更新apt并安装一些必要的工具
+RUN apt-get update && apt-get install -y \
+    git \
+    cmake \
+    libgflags-dev \
+    libgoogle-glog-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# 安装Python依赖
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --no-cache-dir \
+    torch==2.1.0 \
+    torchvision==0.16.0 \
+    onnx==1.15.0 \
+    onnxruntime-gpu==1.16.1 \
+    pycuda==2024.1 \
+    numpy \
+    matplotlib \
+    tqdm
+
+# 克隆一个TensorRT官方的Plugin示例代码，方便后续参考
+# RUN git clone -b release/8.6 https://github.com/NVIDIA/TensorRT.git /workspace/TensorRT_src
+
+# 设置环境变量，以便编译器和链接器能找到TensorRT库
+ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/src/tensorrt/lib
+
+

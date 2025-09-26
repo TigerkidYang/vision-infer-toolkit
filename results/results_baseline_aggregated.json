@@ -1,0 +1,20 @@
+{
+    "model": "ResNet50-PyTorch",
+    "num_experiments": 10,
+    "accuracy_top1": "9.50%",
+    "latency_ms": {
+        "unit": "ms",
+        "statistic": "Average of Medians \u00b1 Std Dev (over 10 runs)",
+        "mean": 7.0085900500544085,
+        "std_dev": 0.5826055225652992,
+        "value": "7.01 \u00b1 0.58"
+    },
+    "throughput_fps": {
+        "unit": "FPS",
+        "statistic": "Average \u00b1 Std Dev (over 10 runs)",
+        "mean": 457.8583856239611,
+        "std_dev": 7.3052264774323525,
+        "value": "457.86 \u00b1 7.31"
+    },
+    "size_mb": "97.80"
+}
