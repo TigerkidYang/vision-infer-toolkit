@@ -5,16 +5,16 @@
     "latency_ms": {
         "unit": "ms",
         "statistic": "Average of Medians \u00b1 Std Dev (over 10 runs)",
-        "mean": 7.0085900500544085,
-        "std_dev": 0.5826055225652992,
-        "value": "7.01 \u00b1 0.58"
+        "mean": 7.003383150015452,
+        "std_dev": 0.7362719864860815,
+        "value": "7.00 \u00b1 0.74"
     },
     "throughput_fps": {
         "unit": "FPS",
         "statistic": "Average \u00b1 Std Dev (over 10 runs)",
-        "mean": 457.8583856239611,
-        "std_dev": 7.3052264774323525,
-        "value": "457.86 \u00b1 7.31"
+        "mean": 462.5848472545026,
+        "std_dev": 5.296161576371898,
+        "value": "462.58 \u00b1 5.30"
     },
     "size_mb": "97.80"
 }
